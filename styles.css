@@ -1,28 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
   text-align: center;
-  background: #f0f8ff;
+  width: 300px;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
-h1 {
-  margin-top: 20px;
+h2 {
+  margin-bottom: 15px;
 }
 
-#weather-container {
-  margin-top: 20px;
-  padding: 20px;
-  display: inline-block;
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select, button {
+  padding: 10px;
   border-radius: 10px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: none;
+  outline: none;
 }
 
-img {
-  width: 100px;
+select {
+  flex: 1;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px;
+  background: #ffffff;
+  color: #333;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+img {
+  width: 80px;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.details div {
+  text-align: center;
+}
+
+.details span {
+  font-size: 20px;
+}
+
+.location {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
