@@ -1,39 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Modern Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1>🌤 Weather App</h1>
+<div class="app">
+  <div class="card">
 
-  <select id="city-select">
-    <option value=""></option>
-    <option value="new york">New York</option>
-    <option value="los angeles">Los Angeles</option>
-    <option value="chicago">Chicago</option>
-    <option value="paris">Paris</option>
-    <option value="tokyo">Tokyo</option>
-    <option value="london">London</option>
-  </select>
+    <h2>🌤 Weather App</h2>
 
-  <button id="get-weather-btn">Get Weather</button>
+    <div class="search">
+      <select id="city">
+        <option value="">Select City</option>
+        <option value="new york">New York</option>
+        <option value="london">London</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="delhi">Delhi</option>
+      </select>
 
-  <div id="weather-container">
-    <img id="weather-icon" />
+      <button onclick="getWeather()">Search</button>
+    </div>
 
-    <p><strong>Temperature:</strong> <span id="main-temperature"></span></p>
-    <p><strong>Feels Like:</strong> <span id="feels-like"></span></p>
-    <p><strong>Humidity:</strong> <span id="humidity"></span></p>
-    <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
-    <p><strong>Wind Gust:</strong> <span id="wind-gust"></span></p>
-    <p><strong>Condition:</strong> <span id="weather-main"></span></p>
-    <p><strong>Location:</strong> <span id="location"></span></p>
+    <div id="weather" class="hidden">
+      <img id="icon" />
+
+      <h1 id="temp">--°C</h1>
+      <p id="condition">---</p>
+
+      <div class="details">
+        <div>
+          <span>💧</span>
+          <p id="humidity">--%</p>
+          <small>Humidity</small>
+        </div>
+
+        <div>
+          <span>🌬</span>
+          <p id="wind">-- km/h</p>
+          <small>Wind</small>
+        </div>
+
+        <div>
+          <span>🌡</span>
+          <p id="feels">--°C</p>
+          <small>Feels Like</small>
+        </div>
+      </div>
+
+      <p class="location" id="location"></p>
+    </div>
+
   </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
